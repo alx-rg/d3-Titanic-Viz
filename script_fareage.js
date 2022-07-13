@@ -1,5 +1,3 @@
-console.log('Fare Ages')
-
 async function handleData() {
 
   const svg = d3.select('#svg_fareage')
@@ -21,16 +19,16 @@ async function handleData() {
     return age
   }
 
-  console.log(getFaresAndAges(data));
+  // console.log(getFaresAndAges(data));
 
   const fares = getFaresAndAges(data).map((fare) => fare.fields.fare)
-  console.log(fares)
+  // console.log(fares)
   const maxFare = Math.max(...fares)
-  console.log(maxFare)
+  // console.log(maxFare)
   const ages = getFaresAndAges(data).map((age) => age.fields.age)
-  console.log(ages)
+  // console.log(a/ges)
   const maxAge = Math.max(...ages)
-  console.log(maxAge)
+  // console.log(maxAge)
 
   const margin = { top: 30, right: 10, bottom: 20, left: 60 }
   const width = 800 - (margin.left + margin.right)
@@ -84,36 +82,11 @@ async function handleData() {
     .attr('r', 6)
     .attr('stroke', 'rgba(0, 0, 0, 0.2)')
     .attr('fill', d => {
-        // console.log(d.id)
-        // console.log(getCountryByEmployees["4"])
         if (d.fields["survived"] === "Yes") {
-          // console.log(d.id, getCountryByEmployees[d.id].latitude, getCountryByEmployees[d.id].longitude)
           return "rgba(60, 179, 113, 0.5)"
         }
         return "rgba(255, 0, 0, 0.5)"
     })
-  // const labels = svg
-  //   .append('g')
-
-  // labels
-  //   .selectAll('circle')
-  //   .data(experienceData)
-  //   .enter()
-  //   .append('circle')
-  //   .attr('r', '5')
-  //   .attr('cx', 10)
-  //   .attr('cy', (d, i) => (i * 25) + 60)
-  //   .attr('fill', (d, i) => d.color)
-
-  // labels
-  //   .selectAll('text')
-  //   .data(experienceData)
-  //   .enter()
-  //   .append('text')
-  //   .text((d) => `${d.count} ${d.experience[0].toUpperCase() + d.experience.slice(1)}`)
-  //   .attr('x', 23)
-  //   .attr('y', (d, i) => (i * 25) + 60)
-  //   .attr('class', 'labelText')
 
   const title = svg
     .append('g')

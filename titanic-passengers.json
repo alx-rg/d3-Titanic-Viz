@@ -3851,8 +3851,7 @@
       "survived": "No",
       "ticket": "113784",
       "passengerid": 340,
-      "sibsp": 0,
-      "cabin": "T"
+      "sibsp": 0
     },
     "record_timestamp": "2016-09-20T15:34:51-07:00"
   },
