@@ -7,3 +7,5 @@ This d3 visualization is intended to create some visuals with the Titanic data s
 ## To Visualize
 
 You can open first in VS Code, and the start a Live Server
+
+View the Visualizations @ [Titanic Data Visualizations on GitHub Pages](https://alx-rg.github.io/d3-Titanic-Viz/)
